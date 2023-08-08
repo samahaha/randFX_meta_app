@@ -1,7 +1,7 @@
 # randFX_meta_app
 A free web app that computes a random-effects meta-analysis of the correlation data in an editable table. 
 
-url: [randfxmeta.streamlit.app]
+url: [randfxmeta.streamlit.app] (randfxmeta.streamlit.app)
 
 The web app performs bootstrapping for confidence interval estimation and produces plots in real time. 
 
