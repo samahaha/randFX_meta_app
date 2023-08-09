@@ -48,7 +48,7 @@ df = pd.DataFrame(
 config = {'r' : st.column_config.NumberColumn('r', min_value=-1, max_value=1),
           'n' : st.column_config.NumberColumn('r', min_value=2)}
 with col1:
-    edited_df = st.data_editor(df, column_config = config, num_rows="dynamic", use_container_width=1, height=500, hide_index=True)
+    edited_df = st.data_editor(df, column_config = config, num_rows="dynamic", use_container_width=1, height=500)
     st.caption('Scroll table for more data')
 
 
@@ -70,9 +70,11 @@ with col1:
 
 
 #compute meta-analytic stats
-meta_r = sum(edited_df.r*edited_df.n)/sum(edited_df.n)
-SDr = np.sqrt((sum(edited_df.n*((edited_df.r-meta_r)**2))) / sum(edited_df.n))
-SEr = SDr/np.sqrt(np.size(edited_df.r))
+er = np.array(edited_df.r)
+en = np.array(edited_df.n)
+meta_r = sum(er*en)/sum(en)
+SDr = np.sqrt((sum(en*((er-meta_r)**2))) / sum(en))
+SEr = SDr/np.sqrt(np.size(er))
 Z = meta_r/SEr
 p = (1-NormalDist().cdf(abs(Z)))*2
 
@@ -97,8 +99,7 @@ ax.hist(edited_df.r,np.linspace(-1,1,27), color='purple')
 nent = len(edited_df.r)
 meta_r_boot=[]
 nboot = 10000
-er = np.array(edited_df.r)
-en = np.array(edited_df.n)
+
 
 for x in range(nboot):
     
