@@ -73,8 +73,8 @@ with col1:
 er = pd.to_numeric(edited_df.r, errors='coerce').dropna()
 en = pd.to_numeric(edited_df.n, errors='coerce').dropna()
 
-#er = np.array(edited_df.r,)
-#en = np.array(edited_df.n)
+er = np.array(er)
+en = np.array(en)
 er
 en
 
