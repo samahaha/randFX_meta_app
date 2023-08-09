@@ -45,9 +45,9 @@ df = pd.DataFrame(
    ]
 )
 
-config = {'Study name' : st.column_config.Column('Study name', help="Study name just for display (not required)")),
+config = {'Study name' : st.column_config.Column('Study name', help="Study name just for display (not required)"),
           'r' : st.column_config.NumberColumn('r', min_value=-1, max_value=1, help="Correlation _r_-value (typically Pearson's _r_"),
-          'n' : st.column_config.NumberColumn('r', min_value=2, help="Sample size for the study")}
+          'n' : st.column_config.NumberColumn('n', min_value=2, help="Sample size for the study")}
 with col1:
     edited_df = st.data_editor(df, column_config = config, num_rows="dynamic", use_container_width=1, height=500)
     st.caption('Scroll table for more data')
