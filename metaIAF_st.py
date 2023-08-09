@@ -132,3 +132,4 @@ col2.metric("p-value", value=round(p,5))
 fcol1.pyplot(fig)
 fcol2.pyplot(fig2)
 
+st.markdown("Contact Jason Samaha (jsamaha@ucsc.edu) to report bugs or suggest additions to the default table")
