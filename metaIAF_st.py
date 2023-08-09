@@ -62,8 +62,9 @@ with col1:
 er = np.array(edited_df.r,dtype=float)
 en = np.array(edited_df.n,dtype=float)
 
-er
-en
+chkn = np.isnan(er)
+chkn
+
 
 meta_r = sum(er*en)/sum(en)
 SDr = np.sqrt((sum(en*((er-meta_r)**2))) / sum(en))
