@@ -22,7 +22,7 @@ df = pd.DataFrame(
        {"Study name": "Shen et al. (2019)",           "n": 17, "r": 0.72},
        {"Study name": "Zhang et al. (2019)",          "n": 18, "r": 0.55},
        {"Study name": "Ro (2019)",                    "n": 9,  "r": 0.58},
-       {"Study name": "Gulbinaite, et al. (2017)",    "n": 30, "r": 0.43},
+       {"Study name": "Gulbinaite et al. (2017)",     "n": 30, "r": 0.43},
        {"Study name": "Samaha & Postle (2015)",       "n": 20, "r": 0.56},
        {"Study name": "Gray & Emmanouil (2019)",      "n": 32, "r": 0.24},
        {"Study name": "Drewes et al. (2022)",         "n": 16, "r": 0.43},
