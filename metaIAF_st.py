@@ -9,7 +9,7 @@ st.subheader("Compute random-effects meta-analysis given _n_ and _r_")
 st.markdown("Autopopulated with data from Samaha & Romei (2023) _Journal of Cognitive Neuroscience_. The sign of each _r_ was adjusted so that positive and negative indicate support for and against the theory, respectively.")
 st.markdown("Plots and statistics will update after any change to the table. To remove data, delete the whole row by checking the square at the far left of the row and pressing delete, rather than leaving empty cells. To add data, click on the empty cell at the bottom of the table. Refresh the page to repopulate the original data.")
 
-col1, col2 = st.columns(2)
+col1, col2 = st.columns([0.6, 0.4])
 #populate original database from Samaha & Romei (2023) JoCN
 df = pd.DataFrame(
     [
@@ -132,4 +132,4 @@ col2.metric("p-value", value=round(p,5))
 fcol1.pyplot(fig)
 fcol2.pyplot(fig2)
 
-st.markdown("Contact Jason Samaha (jsamaha@ucsc.edu) to report bugs or suggest additions to the default table")
+st.markdown("Contact Jason Samaha (jsamaha@ucsc.edu) to report bugs or suggest additions to the default table. See https://github.com/samahaha/randFX_meta_app for source code.")
