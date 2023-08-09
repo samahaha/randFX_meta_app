@@ -72,7 +72,7 @@ with col1:
 #compute meta-analytic stats
 er = np.array(edited_df.r,)
 en = np.array(edited_df.n)
-er = er[er != np.array(None)]
+er = er[er != None]
 er
 
 meta_r = sum(er*en)/sum(en)
