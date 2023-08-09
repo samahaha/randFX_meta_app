@@ -6,7 +6,7 @@ from statistics import NormalDist
 
 #add title to app
 st.subheader("Compute random-effects meta-analysis given _n_ and _r_")
-st.markdown("Autopopulated with data from Samaha & Romei (2023) _Journal of Cognitive Neuroscience_. which analyzed studies correlating individual alpha frequency with temporal properties of perception.")
+st.markdown("Autopopulated with data from Samaha & Romei (2023) _Journal of Cognitive Neuroscience_ who analyzed studies that correlated individual alpha frequency with temporal properties of perception.")
 st.markdown("Plots and statistics will update after any change to the table. To remove data, delete the whole row by checking the square at the far left of the row and pressing delete, rather than leaving empty cells. To add data, click on the empty cell at the bottom of the table. Refresh the page to repopulate the original data.")
 
 #establish columns
