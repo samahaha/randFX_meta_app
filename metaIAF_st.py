@@ -61,10 +61,9 @@ with col1:
  
 er = np.array(edited_df.r,dtype=float)
 en = np.array(edited_df.n,dtype=float)
-ind = (~np.isnan(er)) & (~np.isnan(en))
-ind
-#er = er[(~np.isnan(er)) & (~np.isnan(en))]
-#en = en[(~np.isnan(er)) & (~np.isnan(en))]
+ind2keep = (~np.isnan(er)) & (~np.isnan(en))
+er = er[ind2keep]
+en = en[ind2keep]
 
 
 meta_r = sum(er*en)/sum(en)
