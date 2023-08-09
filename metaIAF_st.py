@@ -45,8 +45,9 @@ df = pd.DataFrame(
    ]
 )
 
+config = {'r' : st.column_config.NumberColumn('r', min_value=-1, max_value=1)}
 with col1:
-    edited_df = st.data_editor(df, num_rows="dynamic", use_container_width=1, height=500)
+    edited_df = st.data_editor(df, column_config = config, num_rows="dynamic", use_container_width=1, height=500)
     st.caption('Scroll table for more data')
 
 
