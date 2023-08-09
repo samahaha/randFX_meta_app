@@ -58,12 +58,12 @@ with col1:
 #compute meta-analytic stats
 #er = pd.to_numeric(edited_df.r, errors='coerce').dropna()
 #en = pd.to_numeric(edited_df.n, errors='coerce').dropna()
-
+ 
 er = np.array(edited_df.r,dtype=float)
 en = np.array(edited_df.n,dtype=float)
 
-chkn = np.isnan(er)
-chkn
+er = er[not np.isnan(er)]
+er
 
 
 meta_r = sum(er*en)/sum(en)
