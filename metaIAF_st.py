@@ -62,7 +62,7 @@ with col1:
 er = np.array(edited_df.r)
 en = np.array(edited_df.n)
 
-print(np.equal(er, None))
+er.type
 
 meta_r = sum(er*en)/sum(en)
 SDr = np.sqrt((sum(en*((er-meta_r)**2))) / sum(en))
