@@ -9,7 +9,9 @@ st.subheader("Compute random-effects meta-analysis given _n_ and _r_")
 st.markdown("Autopopulated with data from Samaha & Romei (2023) _Journal of Cognitive Neuroscience_. The sign of each _r_ was adjusted so that positive and negative indicate support for and against the theory, respectively.")
 st.markdown("Plots and statistics will update after any change to the table. To remove data, delete the whole row by checking the square at the far left of the row and pressing delete, rather than leaving empty cells. To add data, click on the empty cell at the bottom of the table. Refresh the page to repopulate the original data.")
 
+#establish columns
 col1, col2 = st.columns([0.6, 0.4])
+
 #populate original database from Samaha & Romei (2023) JoCN
 df = pd.DataFrame(
     [
@@ -53,23 +55,6 @@ with col1:
     st.caption('Scroll table for more data')
 
 
-#colors to use for night mode
-# fig, ax = plt.subplots()
-# ax.set_title('Distribution of r-values', color = 'silver')
-# ax.set_xlabel('Correlation',color = 'silver')
-# ax.set_ylabel('Count', color = 'silver')
-# ax.set_xlim(-1, 1)
-# ax.set_facecolor('silver')
-# ax.grid('true')
-# ax.set_axisbelow('True')
-# ax.set_xticks(np.linspace(-1, 1, 9))
-# ax.tick_params(axis='x', colors='silver')
-# ax.tick_params(axis='y', colors='silver') 
-# ax.hist(edited_df.r,np.linspace(-1,1,16), color='purple')
-# fig.set_facecolor('black')
-
-
-
 #compute meta-analytic stats
 #er = pd.to_numeric(edited_df.r, errors='coerce').dropna()
 #en = pd.to_numeric(edited_df.n, errors='coerce').dropna()
@@ -101,7 +86,7 @@ ax.hist(edited_df.r,np.linspace(-1,1,27), color='purple')
 #st.pyplot(fig)
 
 #bootstrap analysis
-nent = len(edited_df.r)
+nent = len(er)
 meta_r_boot=[]
 nboot = 10000
 
