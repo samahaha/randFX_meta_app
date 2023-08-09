@@ -1,5 +1,5 @@
 # randFX_meta_app
-A free web app that computes a random-effects meta-analysis of the correlation data in an editable table. 
+A web app that computes a random-effects meta-analysis of the correlation data in an editable table. 
 
 url: https://randfxmeta.streamlit.app
 
