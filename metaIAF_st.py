@@ -62,7 +62,7 @@ with col1:
 er = np.array(edited_df.r,dtype=float)
 en = np.array(edited_df.n,dtype=float)
 
-er = er[not np.isnan(er)]
+er = er[~np.isnan(er)]
 er
 
 
