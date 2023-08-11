@@ -120,7 +120,7 @@ lowerCI = round(np.percentile(meta_r_boot, 2.5),3)
 upperCI = round(np.percentile(meta_r_boot, 97.5),3)
 
 #col1, col2, col3, col4, col5 = st.columns(5)
-col2.metric("Population correlation estimate", value = round(meta_r,3))
+col2.metric("Population correlation estimate", value = round(meta_r,3), help = "Eq. 11 from Field (2011) Psychological Methods")
 col2.metric("Bootstrap 95% CI", value = str([lowerCI, upperCI]))
 col2.metric("Standard error", value=round(SEr,3))
 col2.metric("Z-statistic", value=round(Z,3))
