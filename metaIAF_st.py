@@ -43,12 +43,14 @@ df = pd.DataFrame(
        {"Study name": "London et al. (2022)",             "n": 40, "r": 0.24},
        {"Study name": "Ronconi et al. (2023) exp. 1",     "n": 17, "r": 0.85},
        {"Study name": "Ronconi et al. (2023) exp. 2",     "n": 17, "r": 0.35},
+       {"Study name": "Jiang et al. (2023)",              "n": 16, "r": 0.57}
        {"Study name": "Catalano et al. (2024) NT group",  "n": 69, "r": 0.27},
        {"Study name": "Catalano et al. (2024) SCZ group", "n": 69, "r": 0.31},
        {"Study name": "Catalano et al. (2024) BD group",  "n": 54, "r": 0.15},
        {"Study name": "Johannknecht et al. (2024)",       "n": 20, "r": 0.17},
        {"Study name": "Haarlem et al. (2024) 2FF task",   "n": 31, "r": 0.42},
        {"Study name": "Haarlem et al. (2024) CFF task",   "n": 31, "r": 0.01},
+       
 
        
    ]
